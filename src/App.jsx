@@ -14,17 +14,24 @@ import imgTitanio from './Images/Titanio.jpeg'
 import imgWidias from './Images/Widias.jpeg'
 import imgChatarra from './Images/chatarra electronica.jpeg'
 import imgPaladio from './Images/paladio.jpeg'
+import imgLogo from './Images/metalesreciclaje.jpg'
+import imgReciclajeIcon from './Images/icono-reciclaje.png'
+
+import imgCotizacion from './Images/cotizacion personalizada.jpg'
+import imgRetiroDomicilio from './Images/retiro de materiales a domicilio.jpg'
+import imgGrandesVolumenes from './Images/operaciones con grandes volumenes.jpg'
+import imgRetiroFabricas from './Images/retiro integral en fabricas.jpg'
 
 
 function GenericPhotoIcon({ className = "" }) {
   return (
-    <svg 
-      className={className} 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
       strokeLinejoin="round"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -38,13 +45,13 @@ function GenericPhotoIcon({ className = "" }) {
 
 function WhatsAppIcon({ className = "" }) {
   return (
-    <svg 
-      className={className} 
-      viewBox="0 0 24 24" 
-      fill="currentColor" 
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
     </svg>
   )
 }
@@ -129,21 +136,25 @@ const SERVICES_LIST = [
     id: 'cotizacion',
     title: 'Cotización personalizada',
     desc: 'Evaluamos el tipo, estado, volumen y ubicación del material para ofrecer una cotización adecuada.',
+    image: imgCotizacion,
   },
   {
     id: 'retiro-domicilio',
     title: 'Retiro de materiales a domicilio',
     desc: 'Coordinamos el retiro de materiales en fábricas, depósitos, comercios e industrias.',
+    image: imgRetiroDomicilio,
   },
   {
     id: 'grandes-volumenes',
     title: 'Operaciones con grandes volúmenes',
     desc: 'Gestionamos grandes cantidades de rezagos y materiales industriales con coordinación logística.',
+    image: imgGrandesVolumenes,
   },
   {
     id: 'retiro-fabricas',
     title: 'Retiro integral en fábricas',
     desc: 'Retiramos la totalidad de los materiales acordados y dejamos liberado el sector ocupado.',
+    image: imgRetiroFabricas,
   },
 ];
 
@@ -151,18 +162,20 @@ function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
-  const openWhatsApp = (customMessage = 'Hola Cobre Metal, quisiera solicitar una cotización.') => {
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(customMessage)}`;
+  const WHATSAPP_PHONE = '5492612193613';
+
+  const openWhatsApp = (customMessage = 'Hola Metales Reciclaje, quisiera solicitar una cotización.') => {
+    const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(customMessage)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleMaterialClick = (materialTitle, e) => {
     if (e) e.stopPropagation();
-    openWhatsApp(`Hola Cobre Metal, quisiera cotizar ${materialTitle}. ¿Me podrían pasar más información?`);
+    openWhatsApp(`Hola Metales Reciclaje, quisiera cotizar ${materialTitle}. ¿Me podrían pasar más información?`);
   };
 
   const handleServiceClick = (serviceTitle) => {
-    openWhatsApp(`Hola Cobre Metal, quisiera consultar por el servicio de ${serviceTitle}.`);
+    openWhatsApp(`Hola Metales Reciclaje, quisiera consultar por el servicio de ${serviceTitle}.`);
   };
 
   return (
@@ -171,23 +184,23 @@ function App() {
       <header className="site-header">
         <div className="nav-container">
 
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="brand-logo-link"
-            onClick={(e) => { 
-              e.preventDefault(); 
-              openWhatsApp('Hola Cobre Metal, quisiera realizar una consulta.'); 
+            onClick={(e) => {
+              e.preventDefault();
+              openWhatsApp('Hola Metales Reciclaje, quisiera realizar una consulta.');
             }}
-            title="Contactar a Cobre Metal por WhatsApp"
+            title="Contactar a Metales Reciclaje por WhatsApp"
           >
             <div className="logo-badge-small">
-              <GenericPhotoIcon className="logo-icon-svg" />
+              <img src={imgReciclajeIcon} alt="Metales Reciclaje" className="logo-img-small" />
             </div>
-            <span className="brand-title">Cobre Metal</span>
+            <span className="brand-title">Metales Reciclaje</span>
           </a>
 
 
-          <button 
+          <button
             className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Abrir menú"
@@ -199,82 +212,82 @@ function App() {
 
 
           <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, quisiera conocer más información sobre su empresa.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, quisiera conocer más información sobre su empresa.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Nosotros
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, quisiera consultar sobre los materiales y metales que compran.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre los materiales y metales que compran.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Materiales
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, quisiera consultar sobre sus servicios de retiro y reciclaje.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre sus servicios de retiro y reciclaje.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Servicios
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, tengo metales y materiales para vender, quisiera coordinar una cotización.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, tengo metales y materiales para vender, quisiera coordinar una cotización.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Venta
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, quisiera solicitar una cotización inmediata.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, quisiera solicitar una cotización inmediata.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Cotizar
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, tengo algunas dudas y quisiera realizarles una consulta.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, tengo algunas dudas y quisiera realizarles una consulta.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Preguntas frecuentes
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, quisiera saber dónde se ubican y sus zonas de retiro/cobertura.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, quisiera saber dónde se ubican y sus zonas de retiro/cobertura.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Ubicación
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { 
-                e.preventDefault(); 
-                openWhatsApp('Hola Cobre Metal, me gustaría ponerme en contacto con ustedes.'); 
-                setIsMobileMenuOpen(false); 
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsApp('Hola Metales Reciclaje, me gustaría ponerme en contacto con ustedes.');
+                setIsMobileMenuOpen(false);
               }}
             >
               Contacto
@@ -296,9 +309,9 @@ function App() {
             </p>
 
             <div className="hero-cta-wrapper">
-              <button 
+              <button
                 className="btn-quote-green"
-                onClick={() => openWhatsApp('Hola Cobre Metal, quisiera solicitar una cotización para venta de metales.')}
+                onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera solicitar una cotización para venta de metales.')}
               >
                 Ofrecemos la mejor Cotización del mercado
               </button>
@@ -306,27 +319,27 @@ function App() {
 
 
             <div className="hero-features-row">
-              <div 
+              <div
                 className="feature-card clickable-feature"
-                onClick={() => openWhatsApp('Hola Cobre Metal, quisiera solicitar una cotización inmediata.')}
+                onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera solicitar una cotización inmediata.')}
                 title="Cotización Inmediata por WhatsApp"
               >
                 <span className="feature-tag">COTIZACIÓN</span>
                 <strong className="feature-highlight">INMEDIATA</strong>
               </div>
 
-              <div 
+              <div
                 className="feature-card clickable-feature"
-                onClick={() => openWhatsApp('Hola Cobre Metal, quisiera consultar sobre el retiro sin cargo de materiales.')}
+                onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre el retiro sin cargo de materiales.')}
                 title="Consultar por Retiro sin cargo en WhatsApp"
               >
                 <span className="feature-tag">RETIRO</span>
                 <strong className="feature-highlight">SIN CARGO</strong>
               </div>
 
-              <div 
+              <div
                 className="feature-card clickable-feature"
-                onClick={() => openWhatsApp('Hola Cobre Metal, quisiera consultar sobre el retiro y logística en mi zona.')}
+                onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre el retiro y logística en mi zona.')}
                 title="Consultar Cobertura en toda Argentina en WhatsApp"
               >
                 <span className="feature-tag">TRABAJAMOS</span>
@@ -337,18 +350,16 @@ function App() {
 
 
           <div className="hero-right-column">
-            <div 
+            <div
               className="brand-display-card clickable-brand-card"
-              onClick={() => openWhatsApp('Hola Cobre Metal, quisiera solicitar información sobre compra de metales.')}
-              title="Contactar a Cobre Metal por WhatsApp"
+              onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera solicitar información sobre compra de metales.')}
+              title="Contactar a Metales Reciclaje por WhatsApp"
             >
               <div className="brand-logo-large-box">
-                <div className="large-icon-wrapper">
-                  <GenericPhotoIcon className="large-photo-icon" />
-                </div>
+                <img src={imgLogo} alt="Metales Reciclaje" className="brand-logo-large-img" />
               </div>
 
-              <h2 className="brand-display-title">COBRE METAL</h2>
+              <h2 className="brand-display-title">METALES RECICLAJE</h2>
 
               <div className="brand-display-divider">
                 <span className="divider-line"></span>
@@ -381,8 +392,8 @@ function App() {
 
           <div className="materials-grid">
             {MATERIALS_LIST.map((mat) => (
-              <div 
-                key={mat.id} 
+              <div
+                key={mat.id}
                 className="material-card"
                 onClick={() => handleMaterialClick(mat.title)}
                 title={`Cotizar ${mat.title} por WhatsApp`}
@@ -398,7 +409,7 @@ function App() {
                     <p className="material-card-desc">{mat.desc}</p>
                   </div>
 
-                  <button 
+                  <button
                     className="material-card-whatsapp-btn"
                     onClick={(e) => handleMaterialClick(mat.title, e)}
                     aria-label={`Contactar por WhatsApp para cotizar ${mat.title}`}
@@ -426,16 +437,20 @@ function App() {
 
           <div className="services-grid">
             {SERVICES_LIST.map((srv) => (
-              <div 
-                key={srv.id} 
+              <div
+                key={srv.id}
                 className="service-card"
                 onClick={() => handleServiceClick(srv.title)}
                 title={`Consultar por ${srv.title} en WhatsApp`}
               >
                 <div className="service-card-image-wrap">
-                  <div className="service-placeholder-bg">
-                    <GenericPhotoIcon className="service-placeholder-icon" />
-                  </div>
+                  {srv.image ? (
+                    <img src={srv.image} alt={srv.title} className="service-card-img" />
+                  ) : (
+                    <div className="service-placeholder-bg">
+                      <GenericPhotoIcon className="service-placeholder-icon" />
+                    </div>
+                  )}
                   <div className="service-card-overlay"></div>
                 </div>
 
@@ -460,9 +475,9 @@ function App() {
               <span className="diamond">♦</span> Cotizaciones de mercadería con vista previa.{' '}
               <span className="diamond">♦</span> Retiro y transporte de material a nuestras instalaciones, con equipamiento propio.
             </p>
-            <button 
+            <button
               className="industrial-cta-btn"
-              onClick={() => openWhatsApp('Hola Cobre Metal, quisiera consultar sobre la venta y compra de materiales industriales.')}
+              onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre la venta y compra de materiales industriales.')}
             >
               Consultar por WhatsApp
             </button>
@@ -485,13 +500,13 @@ function App() {
 
           <div className="about-split-right">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              En <strong>Metales Reciclaje</strong> somos una empresa familiar con una sólida trayectoria de <strong>más de 4 generaciones</strong> en el rubro de la compra, recuperación y reciclaje de metales ferrosos y no ferrosos. A lo largo de décadas hemos forjado relaciones basadas en la honestidad, el trato directo y la máxima seriedad comercial con industrias, talleres, demoliciones y particulares de todo el país.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Estamos profundamente <strong>comprometidos con el cuidado del medio ambiente</strong> y el desarrollo de la economía circular. Sabemos que cada tonelada de metal recuperado evita la sobreexplotación de recursos naturales y disminuye el impacto ambiental de los desechos industriales, transformando rezagos en materias primas reutilizables para la industria nacional.
             </p>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Brindamos soluciones integrales de retiro a domicilio con logística y transporte propio, pesaje transparente y la mejor cotización del mercado. Nuestro objetivo es ser su socio estratégico en la gestión y valorización sustentable de materiales reciclables.
             </p>
           </div>
         </div>
@@ -502,15 +517,15 @@ function App() {
         <div className="footer-main-container">
 
           <div className="footer-brand-col">
-            <div 
+            <div
               className="footer-brand-header"
-              onClick={() => openWhatsApp('Hola Cobre Metal, quisiera realizar una consulta.')}
-              title="Contactar a Cobre Metal por WhatsApp"
+              onClick={() => openWhatsApp('Hola Metales Reciclaje, quisiera realizar una consulta.')}
+              title="Contactar a Metales Reciclaje por WhatsApp"
             >
               <div className="footer-logo-box">
-                <GenericPhotoIcon className="footer-logo-svg" />
+                <img src={imgReciclajeIcon} alt="Metales Reciclaje" className="footer-logo-img" />
               </div>
-              <span className="footer-brand-name">COBRE METAL</span>
+              <span className="footer-brand-name">METALES RECICLAJE</span>
             </div>
             <p className="footer-brand-tagline">
               Compra y comercialización de materiales recuperables en toda la Argentina.
@@ -522,55 +537,55 @@ function App() {
             <h3 className="footer-col-title">NAVEGACIÓN</h3>
             <ul className="footer-links-list">
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, quisiera consultar sobre los materiales y metales que compran.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre los materiales y metales que compran.');
                   }}
                 >
                   Materiales
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, quisiera consultar sobre sus servicios de retiro y reciclaje.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre sus servicios de retiro y reciclaje.');
                   }}
                 >
                   Servicios
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, quisiera conocer más información sobre su empresa.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, quisiera conocer más información sobre su empresa.');
                   }}
                 >
                   Nosotros
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, quisiera solicitar una cotización inmediata.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, quisiera solicitar una cotización inmediata.');
                   }}
                 >
                   Cotizar
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, quisiera consultar sobre sus términos y políticas de privacidad.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, quisiera consultar sobre sus términos y políticas de privacidad.');
                   }}
                 >
                   Política de privacidad
@@ -585,15 +600,15 @@ function App() {
             <div className="footer-contact-info">
               <p>
                 <strong>Teléfono:</strong>{' '}
-                <a 
-                  href="#" 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    openWhatsApp('Hola Cobre Metal, me gustaría comunicarme con ustedes por teléfono.'); 
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openWhatsApp('Hola Metales Reciclaje, me gustaría comunicarme con ustedes por teléfono.');
                   }}
                   className="footer-phone-link"
                 >
-                  +54 9 11 0000-0000
+                  +54 9 2612 19-3613
                 </a>
               </p>
             </div>
@@ -604,7 +619,7 @@ function App() {
         <div className="footer-bottom-bar">
           <div className="footer-bottom-container">
             <p className="footer-copyright">
-              © 2026 Cobre Metal. Todos los derechos reservados.
+              © 2026 Metales Reciclaje. Todos los derechos reservados.
             </p>
             <span className="footer-country">Argentina</span>
           </div>
@@ -612,10 +627,10 @@ function App() {
       </footer>
 
 
-      <a 
-        href="https://api.whatsapp.com/send?text=Hola%20Cobre%20Metal,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+      <a
+        href="https://api.whatsapp.com/send?phone=5492612193613&text=Hola%20Metales%20Reciclaje,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n"
+        target="_blank"
+        rel="noopener noreferrer"
         className="whatsapp-floating-btn"
         title="Contactar por WhatsApp"
       >

@@ -1,4 +1,3 @@
-/* Page Layout */
 .page-wrapper {
   min-height: 100vh;
   display: flex;
@@ -6,9 +5,7 @@
   background-color: #25272a;
 }
 
-/* ==========================================================================
-   1. Site Header & Navbar (White background, matching reference)
-   ========================================================================== */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -30,7 +27,7 @@
   min-height: 74px;
 }
 
-/* Brand logo */
+
 .brand-logo-link {
   display: flex;
   align-items: center;
@@ -40,21 +37,30 @@
 }
 
 .logo-badge-small {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   background: #ffffff;
   border: 1px solid #d8dde3;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+  padding: 2px;
 }
 
 .brand-logo-link:hover .logo-badge-small {
   transform: scale(1.04);
-  border-color: var(--copper-main);
+  border-color: #8fa0b5;
+}
+
+.logo-img-small {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .logo-icon-svg {
@@ -72,7 +78,7 @@
   text-transform: uppercase;
 }
 
-/* Main Navigation Links */
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -101,7 +107,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--copper-main);
+  background: linear-gradient(90deg, #94a3b8, #64748b);
   transition: width 0.25s ease;
 }
 
@@ -109,7 +115,7 @@
   width: 100%;
 }
 
-/* Mobile Hamburger Toggle */
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -143,9 +149,7 @@
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* ==========================================================================
-   2. Hero Section (Slate Gradient, 2 Columns)
-   ========================================================================== */
+
 .hero-section {
   position: relative;
   flex: 1;
@@ -166,7 +170,7 @@
   align-items: center;
 }
 
-/* Left Column */
+
 .hero-left-column {
   display: flex;
   flex-direction: column;
@@ -191,7 +195,7 @@
   font-weight: 400;
 }
 
-/* Green CTA Button */
+
 .hero-cta-wrapper {
   margin-bottom: 3.5rem;
 }
@@ -223,7 +227,7 @@
   transform: translateY(0);
 }
 
-/* 3 Benefit Feature Row */
+
 .hero-features-row {
   display: flex;
   gap: 3.5rem;
@@ -257,6 +261,12 @@
   letter-spacing: 1.5px;
   color: var(--hero-badge-title);
   text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: color 0.2s ease;
+}
+
+.clickable-feature:hover .feature-tag {
+  color: #ffffff;
 }
 
 .feature-highlight {
@@ -268,9 +278,7 @@
   text-transform: uppercase;
 }
 
-/* ==========================================================================
-   3. Right Column: Large Brand & Logo Card
-   ========================================================================== */
+
 .hero-right-column {
   display: flex;
   justify-content: center;
@@ -302,17 +310,26 @@
 }
 
 .brand-logo-large-box {
-  width: 170px;
-  height: 170px;
-  background: linear-gradient(145deg, #f7f9fa, #ebedf0);
-  border: 2px dashed #cfd6dc;
-  border-radius: 20px;
+  width: 180px;
+  height: 180px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
   position: relative;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  padding: 12px;
+  overflow: hidden;
+}
+
+.brand-logo-large-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .large-icon-wrapper {
@@ -359,7 +376,7 @@
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: var(--copper-main);
+  color: #5c6776;
   text-transform: uppercase;
 }
 
@@ -372,14 +389,12 @@
 }
 
 .brand-metals-list span {
-  color: var(--copper-main);
+  color: #8492a6;
   font-weight: 900;
   margin: 0 4px;
 }
 
-/* ==========================================================================
-   4. Materials Section (Materiales que compramos)
-   ========================================================================== */
+
 .materials-section {
   background-color: #ffffff;
   padding: 5rem 2rem 6rem;
@@ -406,14 +421,14 @@
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: var(--copper-main);
+  color: #596575;
   text-transform: uppercase;
 }
 
 .kicker-line {
   width: 44px;
   height: 3px;
-  background-color: var(--copper-main);
+  background: linear-gradient(90deg, #596575 0%, #94a3b8 100%);
   border-radius: 2px;
 }
 
@@ -434,7 +449,7 @@
   line-height: 1.6;
 }
 
-/* Grid of Material Cards */
+
 .materials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -482,13 +497,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(10, 12, 16, 0.95) 0%,
-    rgba(10, 12, 16, 0.6) 42%,
-    rgba(10, 12, 16, 0.1) 75%,
-    rgba(10, 12, 16, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(10, 12, 16, 0.95) 0%,
+      rgba(10, 12, 16, 0.6) 42%,
+      rgba(10, 12, 16, 0.1) 75%,
+      rgba(10, 12, 16, 0) 100%);
 }
 
 .material-card-content {
@@ -525,7 +538,7 @@
   max-width: 195px;
 }
 
-/* Material Card WhatsApp Button */
+
 .material-card-whatsapp-btn {
   width: 42px;
   height: 42px;
@@ -558,9 +571,7 @@
   fill: #ffffff;
 }
 
-/* ==========================================================================
-   5. Services Section (Servicios)
-   ========================================================================== */
+
 .services-section {
   background-color: #fbfcfd;
   padding: 5rem 2rem 6rem;
@@ -593,7 +604,7 @@
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
-  border-color: rgba(223, 123, 73, 0.35);
+  border-color: rgba(202, 212, 223, 0.45);
 }
 
 .service-card-image-wrap {
@@ -602,6 +613,17 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.07);
 }
 
 .service-placeholder-bg {
@@ -625,7 +647,7 @@
 
 .service-card:hover .service-placeholder-icon {
   transform: scale(1.1);
-  stroke: var(--copper-main);
+  stroke: #cad4df;
   opacity: 0.95;
 }
 
@@ -635,13 +657,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(10, 12, 16, 0.96) 0%,
-    rgba(10, 12, 16, 0.65) 45%,
-    rgba(10, 12, 16, 0.15) 80%,
-    rgba(10, 12, 16, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(10, 12, 16, 0.96) 0%,
+      rgba(10, 12, 16, 0.65) 45%,
+      rgba(10, 12, 16, 0.15) 80%,
+      rgba(10, 12, 16, 0) 100%);
 }
 
 .service-card-content {
@@ -670,9 +690,7 @@
   line-height: 1.45;
 }
 
-/* ==========================================================================
-   6. Industrial Purchase & Sales Section (Venta de Materiales Banner)
-   ========================================================================== */
+
 .industrial-banner-section {
   background-color: #17191d;
   padding: 5.5rem 2rem 6.5rem;
@@ -702,9 +720,10 @@
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #f5b087;
+  color: #cad5e2;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .industrial-title {
@@ -727,7 +746,7 @@
 }
 
 .industrial-description .diamond {
-  color: #f5b087;
+  color: #94a3b8;
   font-size: 0.82rem;
   display: inline-block;
   margin: 0 4px;
@@ -756,9 +775,7 @@
   box-shadow: 0 6px 20px rgba(36, 161, 72, 0.55);
 }
 
-/* ==========================================================================
-   7. About Section (Quiénes Somos)
-   ========================================================================== */
+
 .about-split-section {
   background-color: #ffffff;
   padding: 6rem 2rem 6.5rem;
@@ -802,9 +819,7 @@
   font-weight: 400;
 }
 
-/* ==========================================================================
-   8. Footer Section (Dark slate/graphite, 3 Columns)
-   ========================================================================== */
+
 .site-footer {
   background-color: #383c42;
   color: #ffffff;
@@ -845,10 +860,19 @@
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease;
+  overflow: hidden;
+  padding: 2px;
 }
 
 .footer-brand-header:hover .footer-logo-box {
   transform: scale(1.05);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-logo-svg {
@@ -877,9 +901,10 @@
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 1.8px;
-  color: #f5b087;
+  color: #cad5e2;
   text-transform: uppercase;
   margin-bottom: 1.4rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .footer-links-list {
@@ -899,7 +924,7 @@
 }
 
 .footer-links-list a:hover {
-  color: #f5b087;
+  color: #ffffff;
   transform: translateX(4px);
 }
 
@@ -918,7 +943,7 @@
 }
 
 .footer-phone-link:hover {
-  color: #f5b087;
+  color: #cad5e2;
 }
 
 .footer-bottom-bar {
@@ -946,9 +971,7 @@
   font-weight: 500;
 }
 
-/* ==========================================================================
-   9. Floating WhatsApp Button
-   ========================================================================== */
+
 .whatsapp-floating-btn {
   position: fixed;
   bottom: 30px;
@@ -978,9 +1001,7 @@
   fill: #ffffff;
 }
 
-/* ==========================================================================
-   10. Responsiveness
-   ========================================================================== */
+
 @media (max-width: 1200px) {
   .materials-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -999,7 +1020,7 @@
   .hero-main-title {
     font-size: 3.5rem;
   }
-  
+
   .hero-container {
     gap: 2.5rem;
   }
@@ -1101,7 +1122,7 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .service-card {
     height: 300px;
   }
