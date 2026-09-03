@@ -58,6 +58,12 @@ function WhatsAppIcon({ className = "" }) {
 
 const MATERIALS_LIST = [
   {
+    id: 'tungsteno',
+    title: 'Tungsteno',
+    desc: 'Insertos, fresas, mechas y herramientas.',
+    image: imgWidias,
+  },
+  {
     id: 'cobre',
     title: 'Cobre',
     desc: 'Cables, caños, virutas y recortes.',
@@ -110,12 +116,6 @@ const MATERIALS_LIST = [
     title: 'Titanio',
     desc: 'Ánodos, tuberías, planchas y piezas especiales.',
     image: imgTitanio,
-  },
-  {
-    id: 'widias',
-    title: 'Widias y Carburo',
-    desc: 'Insertos, fresas, mechas y herramientas.',
-    image: imgWidias,
   },
   {
     id: 'chatarra',
@@ -302,10 +302,10 @@ function App() {
 
           <div className="hero-left-column">
             <h1 className="hero-main-title">
-              Compro todo tipo de Metales
+              Compramos todo tipo de Metales
             </h1>
             <p className="hero-description">
-              Somos especialistas en el Reciclaje de los residuos industriales. Te damos la mejor cotización del mercado.
+              Empresa familiar con más de 4 generaciones de trayectoria en la compra y reciclaje de metales ferrosos y no ferrosos. Comprometidos con el medio ambiente y la economía circular, brindamos retiro a domicilio y la mejor cotización del mercado.
             </p>
 
             <div className="hero-cta-wrapper">
@@ -368,7 +368,7 @@ function App() {
               </div>
 
               <p className="brand-metals-list">
-                COBRE <span>•</span> BRONCE <span>•</span> ALUMINIO <span>•</span> ACERO <span>•</span> PLOMO
+                TUNGSTENO <span>•</span> COBRE <span>•</span> BRONCE <span>•</span> ALUMINIO <span>•</span> ACERO <span>•</span> PLOMO
               </p>
             </div>
           </div>
